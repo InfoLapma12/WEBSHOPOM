@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JORDAN</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+      <div class="header">
+        <div class="logo">
+          <h2>WeBsHoPOm</h2>
+        </div>
+        <div class="search">
+          <form>
+            <input type="text"  id="" placeholder="Keresés...">
+          </form>
+        </div>
+        <div class="icons">
+          <a href="kosar.html" class="fa fa-shopping-cart"><span class="product-item-number">0</span></a>
+          <a href="login.html" class="fa fa-user"></a>
+          <a href="#" class="fa fa-bars"></a>
+        </div>
+      </div>
+      <div class="links">
+          <a href="main.html" class="active">HOME</a>
+          <a href="nike.html" >NIKE</a>
+          <a href="#">JORDAN</a>
+          <a href="adidas.html">ACCESSORIES</a>
+      </div>
+      <section class="shop container">
+        <h2 class="section-title">Air Jordan Collection</h2>
+
+        <div class="shop-content">
+
+          <div class="product-box" id="item1">
+            <img src="jordan/jordan1.webp" alt="Nike Air Force 1,07" class="product-img">
+            <h3 class="product-title">Air Jordan 1 Mid</h3>
+            <span class="price">129.99 EUR</span>
+            <i class='bx bxs-shopping-bag add-cart cart1' onclick="addToCart()"></i> 
+          </div>
+          <div class="product-box" id="item2">
+            <img src="jordan/jordan2.webp" alt="Nike Air Force 1 Low Retro" class="product-img">
+            <h3 class="product-title">Jordan Delta 3 Mid</h3>
+            <span class="price">149.99 EUR</span>
+            <i class='bx bxs-shopping-bag add-cart cart2' onclick="addToCart()"></i>
+          </div>
+          <div class="product-box " id="item3">
+            <img src="jordan/jordan3.webp" alt="Nike Dunk Low" class="product-img">
+            <h3 class="product-title">Air Jordan 7 Retro SE</h3>
+            <span class="price">199.99 EUR</span>
+            <i class='bx bxs-shopping-bag add-cart cart3' onclick="addToCart()"></i>
+          </div>
+          <div class="product-box " id="item3">
+            <img src="jordan/jordan4.webp" alt="Nike Air Max Terrascape Plus" class="product-img">
+            <h3 class="product-title">Air Jordan 5Aqua</h3>
+            <span class="price">209.99 EUR</span>
+            <i class='bx bxs-shopping-bag add-cart cart4' onclick="addToCart()"></i>
+          </div>
+          <div class="product-box " id="item5">
+            <img src="jordan/jordan5.webp" alt="Nike Air VaporMax 2021 FK" class="product-img">
+            <h3 class="product-title">Luka 1</h3>
+            <span class="price">109.99 EUR</span>
+            <i class='bx bxs-shopping-bag add-cart cart5' onclick="addToCart()"></i>
+          </div>
+          <div class="product-box " id="item6">
+            <img src="jordan/jordan6.webp" alt="Nike Blazer Mid '77 Jumbo" class="product-img">
+            <h3 class="product-title">Air Jordan 12Eastside Golf</h3>
+            <span class="price">224.99 EUR</span>
+            <i class='bx bxs-shopping-bag add-cart cart6' onclick="addToCart()"></i>
+          </div>
+          <div class="product-box " id="item7">
+            <img src="jordan/jordan7.webp" alt="Nike Sportswear Storm-FIT Windrunner" class="product-img">
+            <h3 class="product-title">Jordan x CLOT</h3>
+            <span class="price">119.99 EUR</span>
+            <i class='bx bxs-shopping-bag add-cart cart6' onclick="addToCart()"></i>
+          </div>
+          <div class="product-box " id="item6">
+            <img src="jordan/jordan8.webp" alt="Nike Sportswear Storm-FIT" class="product-img">
+            <h3 class="product-title">Nike Sportswear Storm-FIT</h3>
+            <span class="price">128.10 EUR</span>
+            <i class='bx bxs-shopping-bag add-cart cart6' onclick="addToCart()"></i>
+          </div>
+          <div class="product-box " id="item9">
+            <img src="jordan/jordan9.webp" alt="Nike Sportswear Storm-FIT Windrunner" class="product-img">
+            <h3 class="product-title">Jordan Dri-FIT Zion</h3>
+            <span class="price">99.99 EUR</span>
+            <i class='bx bxs-shopping-bag add-cart cart6' onclick="addToCart()"></i>
+          </div>
+        </div>
+      </section>
+      <script>
+        document.getElementsByClassName("fa")[2].addEventListener(
+          "click",function(){
+          document.getElementsByClassName("links")[0].classList.toggle
+          ("snowmylinks");
+        });
+      </script>
+</body>
+</html>

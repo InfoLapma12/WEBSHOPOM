@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeBsHoPOm</title>
+  <script src="javascript/login.js"></script>
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+      <div class="header">
+        <div class="logo">
+          <a href="#"><h2>WeBsHoPOm</h2></a>
+        </div>
+        <div class="search">
+          <form class="search-bar">
+            <button type="button"><img src="search.png" alt=""></i></button>
+            <input type="text"  id="" placeholder="Keresés...">
+          </form>
+        </div>
+        <div class="icons">
+          <a href="kosar.html" class="fa fa-shopping-cart"><span class="product-item-number">0</span></a></a>
+          <a href="bejel.html" class="fa fa-user"><span class="bejel-name"></span></a>
+          <a href="regiszt.html" class="fa fa-male"><span class="regiszt-name"></span></a>
+          <a href="#" class="fa fa-bars"></a>
+        </div>
+      </div>
+      <div class="links">
+          <a href="main.html">HOME</a>
+          <a href="nike.html" >NIKE</a>
+          <a href="Jordan.html">JORDAN</a>
+          <a href="adidas.html">ACCESSORIES</a>
+      </div>
+      <section>
+        <span class="felhasznalo"></span>
+        <h2 class="section-title" style="width: 500px; text-align: center; padding: 20px;">Welcome my webshop </h2>
+      </section>
+      <script>
+        document.getElementsByClassName("fa")[3].addEventListener(
+          "click",function(){
+          document.getElementsByClassName("links")[0].classList.toggle
+          ("snowmylinks");
+        });
+      </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CART</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/kosar.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+.cart {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.cart h2 {
+  margin-top: 0;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart li {
+  margin-bottom: 10px;
+}
+
+.cart img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+#total-price {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#clear-cart {
+  margin-top: 20px;
+  background-color: #f44336;
+  color:white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#clear-cart:hover {
+  background-color: #d6301f;
+}
+</style>
+<body>
+      <div class="header">
+        <div class="logo">
+          <h2>WeBsHoPOm</h2>
+        </div>
+        <div class="search">
+          <form>
+            <input type="text"  id="" placeholder="Keresés...">
+          </form>
+        </div>
+        <div class="icons">
+          <a href="kosar.html" class="fa fa-shopping-cart" class="product-item-number"></a>
+          <a href="login.html" class="fa fa-user"></a>
+          <a href="#" class="fa fa-bars"></a>
+        </div>
+      </div>
+      <div class="links">
+          <a href="main.html">HOME</a>
+          <a href="nike.html" >NIKE</a>
+          <a href="Jordan.html">JORDAN</a>
+          <a href="adidas.html">ACCESSORIES</a>
+      </div>
+      <section>
+        <div class="cart">
+          <h2>Kosár</h2>
+          <ul id="cart-list"></ul>
+          <p id="total-price">Összesen: 0 Ft</p>
+          <button id="clear-cart" onclick="clearCartItems()">Kosár ürítése</button>
+        </div>
+        
+      </section>
+<script>
+        document.getElementsByClassName("fa")[2].addEventListener(
+          "click",function(){
+          document.getElementsByClassName("links")[0].classList.toggle
+          ("snowmylinks");
+        });
+</script>
+<script>
+const cartList = document.getElementById("cart-list");
+const totalPrice = document.getElementById("total-price");
+const clearCart = document.getElementById("clear-cart");
+
+let cartItems = [];
+
+function addToCart(name, price, image) {
+  const item = { name, price, image };
+  cartItems.push(item);
+  renderCart();
+}
+
+function renderCart() {
+  cartList.innerHTML = "";
+  let total = 0;
+  cartItems.forEach(item => {
+    const div = document.createElement("div");
+    const img = document.createElement("img");
+    img.src = item.image;
+    div.appendChild(img);
+    const spanName = document.createElement("h3");
+    spanName.innerHTML = item.name;
+    div.appendChild(spanName);
+    const spanPrice = document.createElement("span");
+    spanPrice.innerHTML = item.price + " Ft";
+    div.appendChild(spanPrice);
+    cartList.appendChild(div);
+    total += item.price;
+  });
+  totalPrice.innerHTML = "Összesen: " + total + " Ft";
+}
+
+function clearCartItems() {
+  cartItems = [];
+  renderCart();
+}
+
+clearCart.addEventListener("click", clearCartItems);
+//-------------------------------------------------------------------
+const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+addToCartButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const product = button.parentNode;
+    const name = product.querySelector("h3").innerHTML;
+    const price = parseInt(product.querySelector("span").innerHTML.replace("Ár: ", "").replace(" Ft", ""));
+    const image = product.querySelector("img").src;
+    addToCart(name, price, image);
+  });
+});
+      </script>
+</body>
+</html>

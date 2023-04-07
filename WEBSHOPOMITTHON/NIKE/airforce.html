@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nike Air Force 1,07</title>
+  <link rel="stylesheet" href="../css/farproduct.css">
+  <link rel="stylesheet" href="../css/products.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+      <div class="header">
+        <div class="logo">
+          <a href="#"><h2>WeBsHoPOm</h2></a>
+        </div>
+        <div class="search">
+          <form class="search-bar">
+            <button type="button"><img src="../search.png" alt=""></i></button>
+            <input type="text"  id="" placeholder="Keresés...">
+          </form>
+        </div>
+        <div class="icons">
+          <a href="../kosar.html" class="fa fa-shopping-cart"><span class="product-item-number">0</span></a></a>
+          <a href="../bejel.html" class="fa fa-user"><span class="bejel-name"></span></a>
+          <a href="../regiszt.html" class="fa fa-male"><span class="regiszt-name"></span></a>
+          <a href="#" class="fa fa-bars"></a>
+        </div>
+      </div>
+      <div class="links">
+          <a href="../main.html">HOME</a>
+          <a href="../nike.html" >NIKE</a>
+          <a href="../Jordan.html">JORDAN</a>
+          <a href="../adidas.html">ACCESSORIES</a>
+      </div>
+      <section>
+            <div class="flex-box">
+                <div class="left">
+                    <div class="big-img">
+                        <img src="../nikecipo/air force1.webp" alt="Nike Air Force 1,07">
+                    </div>
+                    <div class="images">
+                        <div class="small-img">
+                            <img onclick="showImg(this.src)" src="../nikecipo/airforce1.webp" alt="Nike Air Force 1,07" >
+                        </div>
+                        <div class="small-img">
+                            <img onclick="showImg(this.src)" src="../nikecipo/airforce2.webp" alt="Nike Air Force 1,07" >
+                        </div>
+                        <div class="small-img">
+                          <img onclick="showImg(this.src)" src="../nikecipo/airforce3.webp" alt="Nike Air Force 1,07">
+                      </div>
+                      <div class="small-img">
+                        <img onclick="showImg(this.src)" src="../nikecipo/airforce4.webp" alt="Nike Air Force 1,07" >
+                    </div>
+                    </div>
+                </div>
+                <div class="right">
+                  <div class="url"><a href="../main.html" class="url">Home</a> > <a href="../nike.html" class="url">NIKE</a></div>
+                  <div class="pname">Nike Air Force 1,07</div>
+                  <div class="ratings">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <div class="price">149.99 EUR</div>
+                  <div class="size">
+                    <p>Méret : </p>
+                    <select>
+                      <option class="psize" value="1">45 EU</option>
+                      <option class="psize" value="2">46 EU</option>
+                      <option class="psize" value="3">47 EU</option>
+                      <option class="psize" value="4">48 EU</option>
+                      <option class="psize" value="5">48 EU</option>
+                    </select>
+                  </div>
+                  <div class="quanity">
+                    <p>Mennyiség : </p>
+                    <input type="number" min="1" max="10" value="1">
+                  </div>
+                  <div class="btn-box">
+                    <button class="cart-btn">Kosárba</button>
+                  </div>
+                  <div>
+                    <p class="deatils">Leírás : </p>
+                    <p>
+                      <ol>
+                        <li>Szivacsos középtalp</li>
+                        <li>Perforációk a lábujjaknál</li>
+                        <li>Gumitalp</li>
+                        <li>Megjelenített szín: Fehér/Fehér</li>
+                        <li>Stílus: CW2288-111</li>
+                      </ol>
+                    </p>
+                  </div>
+                </div>
+            </div>
+            
+      </section>
+      <script>
+        document.getElementsByClassName("fa")[3].addEventListener(
+          "click",function(){
+          document.getElementsByClassName("links")[0].classList.toggle
+          ("snowmylinks");
+        });
+
+        let showimg = document.querySelector("big-img img");
+        function showimg(pic){
+          showimg.src = pic
+        }
+      </script>
+</body>
+</html>

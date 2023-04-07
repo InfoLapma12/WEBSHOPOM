@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessories</title>
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+.cart {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.cart h2 {
+  margin-top: 0;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart li {
+  margin-bottom: 10px;
+}
+
+.cart img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+#total-price {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#clear-cart {
+  margin-top: 20px;
+  background-color: #f44336;
+  color:white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#clear-cart:hover {
+  background-color: #d6301f;
+}
+</style>
+<body>
+      <div class="header">
+        <div class="logo">
+          <h2>WeBsHoPOm</h2>
+        </div>
+        <div class="search">
+          <form class="search-bar">
+            <button type="button"><img src="search.png" alt=""></i></button>
+            <input type="text"  id="" placeholder="Keresés...">
+          </form>
+        </div>
+        <div class="icons">
+          <a href="kosar.html" class="fa fa-shopping-cart"><span class="product-item-number">0</span></a>
+          <a href="bejel.html" class="fa fa-user"><span></a>
+          <a href="regiszt.html" class="fa fa-male"><span class="regiszt-name"></span></a>
+          <a href="#" class="fa fa-bars"></a>
+        </div>
+      </div>
+      <div class="links">
+          <a href="main.html" class="active">HOME</a>
+          <a href="nike.html" >NIKE</a>
+          <a href="Jordan.html">JORDAN</a>
+          <a href="#">ACCESSORIES</a>
+      </div>
+      <section class="shop container">
+        <div class="cart">
+          <h2 style="color: black;">Cart</h2>
+          <ul class="cart-items"></ul>
+          <p class="total-price">Összesen: 0.00</p>
+          <button id="clear-cart" onclick="clearCartItems()">Kosár ürítése</button>
+        </div>
+        <h2 class="section-title">Accessories</h2>
+        <div class="shop-content">
+
+          <div class="product-box" id="item1">
+            <img src="kiegeszitok/kiegesziiok1.jpg" alt="Nike Everyday Cushioned" class="product-img">
+            <h3 class="product-title">Nike Everyday Cushioned</h3>
+            <span class="price">22,99 EUR</span>
+            <i class='bx bxs-shopping-bag add-cart cart1' onclick="addToCart()"></i>
+          </div>
+          <div class="product-box" id="item2">
+            <img src="kiegeszitok/kiegesziiok2.jpg  " alt="Nike Everyday Cushioned Black" class="product-img">
+            <h3 class="product-title">Nike Everyday Cushioned Black</h3>
+            <span class="price">22,99 EUR</span>
+            <i class='bx bxs-shopping-bag add-cart cart2' onclick="addToCart()"></i>
+          </div>
+          <div class="product-box" id="item3">
+            <img src="kiegeszitok/kiegesziiok3.jpg" alt="Nike Everyday Plus" class="product-img">
+            <h3 class="product-title">Nike Everyday Plus</h3>
+            <span class="price">17,99 EUR</span>
+            <i class='bx bxs-shopping-bag add-cart cart3' onclick="addToCart()"></i>
+          </div>
+          <div class="product-box" id="item4">
+            <img src="kiegeszitok/kiegesziiok4.jpg" alt="Nike Brasilia" class="product-img">
+            <h3 class="product-title">Nike Brasilia</h3>
+            <span class="price">34,99 EUR</span>
+            <i class='bx bxs-shopping-bag add-cart cart4' onclick="addToCart()"></i>
+          </div>
+          <div class="product-box" id="item5">
+            <img src="kiegeszitok/kiegesziiok5.jpg" alt="Jordan BACK BAGS" class="product-img">
+            <h3 class="product-title">Jordan BACK BAGS</h3>
+            <span class="price">34,99 EUR</span>
+            <i class='bx bxs-shopping-bag add-cart cart5' onclick="addToCart()"></i>
+          </div>
+          <div class="product-box" id="item6">
+            <img src="kiegeszitok/kiegesziiok6.jpg" alt="Nike Sportswear Legacy 91" class="product-img">
+            <h3 class="product-title">Nike Sportswear Legacy 91</h3>
+            <span class="price">24,99 EUR</span>
+            <i class='bx bxs-shopping-bag add-cart cart6' onclick="addToCart()"></i>
+          </div>
+          <div class="product-box" id="item6">
+            <img src="kiegeszitok/kiegesziiok7.jpg" alt="Jordan Jumpman Classic99 Metal" class="product-img">
+            <h3 class="product-title">Jordan Jumpman Classic99 Metal</h3>
+            <span class="price">24,97 EUR</span>
+            <i class='bx bxs-shopping-bag add-cart cart6' onclick="addToCart()"></i>
+          </div>
+          <div class="product-box" id="item6">
+            <img src="kiegeszitok/kiegesziiok8.jpg" alt="Nike Extreme" class="product-img">
+            <h3 class="product-title">Nike Extreme</h3>
+            <span class="price">24,47 EUR</span>
+            <i class='bx bxs-shopping-bag add-cart cart6' onclick="addToCart()"></i>
+          </div>
+          <div class="product-box" id="item6">
+            <img src="kiegeszitok/kiegesziiok9.jpg" alt="Premier League Pitch Ball" class="product-img">
+            <h3 class="product-title">Premier League Pitch Ball</h3>
+            <span class="price">19,99 EUR</span>
+            <i class='bx bxs-shopping-bag add-cart cart6' onclick="addToCart()"></i>
+          </div>
+
+        </div>
+      </section>
+      <script>
+        document.getElementsByClassName("fa")[3].addEventListener(
+          "click",function(){
+          document.getElementsByClassName("links")[0].classList.toggle
+          ("snowmylinks");
+        });
+      </script>
+      <script src="javascript/app.js"></script>
+</body>
+</html>

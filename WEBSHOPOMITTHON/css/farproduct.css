@@ -73,16 +73,17 @@ option{
     font-size: 20px;
 }
 .psize{
-    width: 60px;
-    width: 30px;
-    border: 1px solid rgb(228, 117, 13);
+    border: 1px solid #0d1b2a;
     color: #000;
     text-align: center;
     margin: 0 10px;
-    margin-bottom: 25px;
     cursor: pointer;
     padding: 10px;
     font-size: 15px;
+    border-radius: 15px;
+}
+.psize:hover{
+    transform: scale(1.2);
 }
 .psize.active{
     border-width: 1.5px;
@@ -136,4 +137,23 @@ ol li{
     font-size: 15px;
     list-style-type:disc  ;
     margin-left: 45px;
+}
+#cart{
+    color: #0d1b2a;
+  font-size: 20px;
+  padding: 0px 15px;
+  transition: 0.6s;
+  text-align: right;
+  margin-top: 25px;
+  border-top-right-radius: 15px;
+}
+.cart-remove{
+    color: #0d1b2a;
+}
+#hello{
+    list-style-type: none;
+}
+.hr{
+    display: flex;
+    color: #0d1b2a;
 }

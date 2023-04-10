@@ -1,60 +1,23 @@
-const addToCartButtons = document.querySelectorAll('.add-to-cart');
 
-// Kosár lista
-const cartItems = [];
+var x = 0;
+document.getElementById("c").innerText = x;
 
-// Összesen mező
-const totalPrice = document.querySelector('.total-price');
-
-// Termék hozzáadása a kosárhoz
-function addToCart(productName, productPrice) {
-  const item = {
-    name: productName,
-    price: productPrice
-  };
-
-  cartItems.push(item);
-
-  // Kosár lista frissítése
-  updateCart();
-}
-
-// Kosár lista frissítése
-function updateCart() {
-  const cartList = document.querySelector('.cart-items');
-  let cartHTML = '';
-
-  for (let i = 0; i < cartItems.length; i++) {
-    cartHTML += `<li>${cartItems[i].name} - ${cartItems[i].price} Ft</li>`;
+function airforce(val,price){
+  document.getElementById("hello").innerHTML +=  "<br><li>"+ val + "<input type='button' value='X' onclick='remove()' class='cart-remove' ><br>" + price + "EUR" + "</li>"  ;
+  x = x + 1;
+  document.getElementById("c").innerHTML = x;
+  if (x >= 5){ 
+    alert("A kosár megtelt")
   }
-
-  cartList.innerHTML = cartHTML;
-
-  // Összesen mező frissítése
-  let total = 0;
-
-  for (let i = 0; i < cartItems.length; i++) {
-    total += cartItems[i].price;
-  }
-
-  totalPrice.innerText = `Összesen: ${total.toFixed(2)} Ft`;
 }
+function remove(){
 
-// Minden Kosárba gombra kattintás
-for (let i = 0; i < addToCartButtons.length; i++) {
-  addToCartButtons[i].addEventListener('click', function() {
-    const productName = this.parentNode.querySelector('h3').innerHTML;
-    const productPrice = parseFloat(this.parentNode.querySelector('.price').innerHTML);
-
-    addToCart(productName, productPrice);
-  });
-}
-
-
-
-function clearCartItems() {
-    cartItems = [];
-    renderCart();
+  var listItem = document.getElementsByTagName("li");
+  for(var i = 0; i < listItem.length; i++){
+    listItem[i].onclick = function(){
+      this.parentNode.removeChild(this);
+    }
   }
-  
-  clearCart.addEventListener("click", clearCartItems);
+  x = x - 1;
+  document.getElementById("c").innerText = x;
+}

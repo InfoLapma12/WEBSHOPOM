@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nike Air Force 1,07</title>
+  <script src="../javascript/main.js"></script>
   <link rel="stylesheet" href="../css/farproduct.css">
   <link rel="stylesheet" href="../css/products.css">
   <link rel="stylesheet" href="../css/style.css">
@@ -23,7 +24,6 @@
           </form>
         </div>
         <div class="icons">
-          <a href="../kosar.html" class="fa fa-shopping-cart"><span class="product-item-number">0</span></a></a>
           <a href="../bejel.html" class="fa fa-user"><span class="bejel-name"></span></a>
           <a href="../regiszt.html" class="fa fa-male"><span class="regiszt-name"></span></a>
           <a href="#" class="fa fa-bars"></a>
@@ -36,10 +36,17 @@
           <a href="../adidas.html">ACCESSORIES</a>
       </div>
       <section>
+        <div style="background-color: #bf4d5d; width: 250px; height: 450px;  float: left;" id="cart">
+          <i class="fa fa-shopping-cart" id="cart"></i>
+            <b id="c"></b>
+          <ol id="hello"></ol>
+          <hr class="hr">
+        </div>
+        
             <div class="flex-box">
                 <div class="left">
                     <div class="big-img">
-                        <img src="../nikecipo/air force1.webp" alt="Nike Air Force 1,07">
+                        <img src="../nikecipo/air force1.webp" alt="Nike Air Force 1,07" title="Nike Air Force 1,07" >
                     </div>
                     <div class="images">
                         <div class="small-img">
@@ -58,7 +65,7 @@
                 </div>
                 <div class="right">
                   <div class="url"><a href="../main.html" class="url">Home</a> > <a href="../nike.html" class="url">NIKE</a></div>
-                  <div class="pname">Nike Air Force 1,07</div>
+                  <div class="pname" id="name">Nike Air Force 1,07</div>
                   <div class="ratings">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -66,23 +73,18 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star-half-stroke"></i>
                   </div>
-                  <div class="price">149.99 EUR</div>
+                  <div class="price" id="price">149.99 EUR</div>
                   <div class="size">
-                    <p>Méret : </p>
-                    <select>
-                      <option class="psize" value="1">45 EU</option>
-                      <option class="psize" value="2">46 EU</option>
-                      <option class="psize" value="3">47 EU</option>
-                      <option class="psize" value="4">48 EU</option>
-                      <option class="psize" value="5">48 EU</option>
-                    </select>
-                  </div>
-                  <div class="quanity">
-                    <p>Mennyiség : </p>
-                    <input type="number" min="1" max="10" value="1">
+                    <p for="size">Méret : </p>
+                    <button class="psize" value="43">43</button>
+                    <button class="psize" value="44">44</button>
+                    <button class="psize" value="45">45</button>
+                    <button class="psize" value="6">46</button>
+                    <button class="psize" value="47">47</button>
+                    <button class="psize" value="48">48</button>
                   </div>
                   <div class="btn-box">
-                    <button class="cart-btn">Kosárba</button>
+                    <button class="cart-btn" onclick="airforce('Nike Air Force 1,07',149.99)">Kosárba</button>
                   </div>
                   <div>
                     <p class="deatils">Leírás : </p>
@@ -101,16 +103,11 @@
             
       </section>
       <script>
-        document.getElementsByClassName("fa")[3].addEventListener(
+        document.getElementsByClassName("fa")[2].addEventListener(
           "click",function(){
           document.getElementsByClassName("links")[0].classList.toggle
           ("snowmylinks");
         });
-
-        let showimg = document.querySelector("big-img img");
-        function showimg(pic){
-          showimg.src = pic
-        }
       </script>
 </body>
 </html>
